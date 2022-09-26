@@ -20,7 +20,9 @@ function App() {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (event: any) => {
+    //Prevent page reload
+    event.preventDefault();
     if (username !== "" && password !== "") {
       setIsSubmitted(true);
       axios
